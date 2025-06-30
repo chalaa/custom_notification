@@ -80,22 +80,15 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
    git clone https://github.com/chalaa/custom_notification
 
 2. copy the cloned folder to the your odoo project
-    ```
-    ```bash
     cp -r custom_notification /path/to/your/odoo/addons/
 
 3. update you odoo project
-    ```
-    ```bash
     ./odoo-bin -c /path/to/your/odoo.conf -u custom_notification
-
-    docker
-    ```
-    ```bash
+#### docker
     docker exec -it <container_name> odoo -u custom_notification -d <your_database>
 
 
-✅ Verify Installation
+## ✅ Verify Installation
 - A 🔔 bell icon should appear in the system tray
 - Create test notifications to validate behavior
 
