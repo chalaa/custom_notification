@@ -67,7 +67,7 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 
 ## 📦 Dependencies
 
-- Odoo **17.0 or later** (tested on 17.0)
+- Odoo **16.0** (tested on 16.0)
 - **No extra Python packages required**
 - Uses **OWL** (Odoo Web Library) for frontend
 
@@ -78,3 +78,70 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 1. **Clone or Download the Module**
    ```bash
    git clone https://github.com/chalaa/custom_notification
+
+2. copy the cloned folder to the your odoo project
+    ```
+    ```bash
+    cp -r custom_notification /path/to/your/odoo/addons/
+
+3. update you odoo project
+    ```
+    ```bash
+    ./odoo-bin -c /path/to/your/odoo.conf -u custom_notification
+
+    docker
+    ```
+    ```bash
+    docker exec -it <container_name> odoo -u custom_notification -d <your_database>
+
+
+✅ Verify Installation
+- A 🔔 bell icon should appear in the system tray
+- Create test notifications to validate behavior
+
+## 📁 Module Structure
+
+    custom_notification/
+    ├── __init__.py
+    ├── __manifest__.py
+    ├── controllers/
+    │   └── notification_controller.py
+    ├── models/
+    │   └── notification.py
+    ├── static/
+    │   └── src/
+    │       ├── js/
+    │       │   └── notification.js
+    │       └── xml/
+    │           └── notification.xml
+    ├── .gitignore
+    └── README.md
+
+## 🔑 Key Files
+- __manifest__.py — Metadata & dependencies
+- models/notification.py — Notification model logic
+- controllers/notification_controller.py — API route handlers
+- static/src/js/notification.js — OWL logic for systray dropdown
+- static/src/xml/notification.xml — UI template for dropdown
+
+## 💡 Usage
+### 📥 Backend
+- ### Create Notifications
+    ```
+    ```bash
+    self.env['custom.notification'].create({
+    'title': 'New Task Assigned',
+    'message': 'You have been assigned a new task.',
+    'user_id': user_id,
+    'action_model': 'project.task',
+    'action_res_id': task_id,
+    'action_view_mode': 'form',
+})
+
+
+### 🖥️ Frontend
+- 🔔 Bell icon shows unread count
+- 📩 Dropdown lists unread notifications with timestamps
+- ✅ Click to mark as read
+- 📄 Automatically redirects to linked records
+- 📜 "See More" loads more notifications via pagination
