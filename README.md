@@ -1,10 +1,10 @@
-##Custom Notification Module for Odoo
+## Custom Notification Module for Odoo
 
-#Overview
+# Overview
 
 The custom_notification module for Odoo provides a robust notification system that allows users to receive and manage notifications within the Odoo interface. Notifications are displayed in the system tray (systray) with a dropdown menu, showing unread notifications with titles, messages, and relative timestamps. Users can mark notifications as read and trigger associated actions (e.g., redirecting to specific records). The module supports pagination for loading more notifications and integrates seamlessly with Odoo's backend and frontend.
 
-#Features
+# Features
 
 Notification Model: Stores notifications with fields for title, message, user, read status, and action-related data (model, record ID, view mode, etc.).
 Dynamic Action Handling: Notifications can link to specific records in Odoo, redirecting users to the relevant form or view.
