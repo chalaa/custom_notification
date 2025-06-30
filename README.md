@@ -84,7 +84,7 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 
 3. update you odoo project
     ./odoo-bin -c /path/to/your/odoo.conf -u custom_notification
-#### docker
+-    docker
     docker exec -it <container_name> odoo -u custom_notification -d <your_database>
 
 
