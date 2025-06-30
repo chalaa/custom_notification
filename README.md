@@ -139,6 +139,6 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 - 📜 "See More" loads more notifications via pagination
 
 
-#### 📸 Screenshot
+## 📸 Screenshot
 
 ![Notification Dropdown Example](static/description/notification_preview.png)
