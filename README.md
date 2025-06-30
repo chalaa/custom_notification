@@ -76,11 +76,12 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 ## 🛠️ Installation
 
 1. **Clone or Download the Module**
-   ```bash
-   git clone https://github.com/chalaa/custom_notification
+    ```bash
+    git clone https://github.com/chalaa/custom_notification
 
 2. copy the cloned folder to the your odoo project
     cp -r custom_notification /path/to/your/odoo/addons/
+
 
 3. update you odoo project
     ./odoo-bin -c /path/to/your/odoo.conf -u custom_notification
@@ -121,8 +122,6 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 ## 💡 Usage
 ### 📥 Backend
 - ### Create Notifications
-    ```
-    ```bash
     self.env['custom.notification'].create({
     'title': 'New Task Assigned',
     'message': 'You have been assigned a new task.',
@@ -130,7 +129,7 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
     'action_model': 'project.task',
     'action_res_id': task_id,
     'action_view_mode': 'form',
-})
+    })
 
 
 ### 🖥️ Frontend
