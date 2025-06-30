@@ -1,14 +1,17 @@
 {
-    'name': 'Notification',
+    'name': 'Custom Notification',
     'version': '16.0',
+    'summary': 'Real-time user notifications in Odoo systray using OWL.',
     'description': '''
-        This module will give an overview about how to add new menu in navbar 
-        using JS.
+        This module provides a systray dropdown with real-time user notifications,
+        including unread badges, links to records, and API support.
     ''',
     'category': 'Productivity/Discuss',
-    "author": "Chala Olani",
-    'depends': ['base','mail','bus','web'],
-    'data' :[
+    'author': 'Chala Olani',
+    'website': 'https://github.com/chalaa/custom_notification',
+    'license': 'LGPL-3',
+    'depends': ['base', 'mail', 'bus', 'web'],
+    'data': [
         'security/ir.model.access.csv',
     ],
     'assets': {
@@ -17,4 +20,8 @@
             'custom_notification/static/src/xml/notification.xml',
         ],
     },
+    'images': ['static/description/notification_preview.png'],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }

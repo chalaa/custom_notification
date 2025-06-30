@@ -122,12 +122,12 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 - ### Create Notifications
     ```
     self.env['custom.notification'].create({
-    'title': 'New Task Assigned',
-    'message': 'You have been assigned a new task.',
-    'user_id': user_id,
-    'action_model': 'project.task',
-    'action_res_id': task_id,
-    'action_view_mode': 'form',
+        'title': 'New Task Assigned',
+        'message': 'You have been assigned a new task.',
+        'user_id': user_id,
+        'action_model': 'project.task',
+        'action_res_id': task_id,
+        'action_view_mode': 'form',
     })
 
 
@@ -137,3 +137,8 @@ Fully integrated with Odoo's backend and frontend using OWL (Odoo Web Library).
 - ✅ Click to mark as read
 - 📄 Automatically redirects to linked records
 - 📜 "See More" loads more notifications via pagination
+
+
+#### 📸 Screenshot
+
+![Notification Dropdown Example](static/description/notification_preview.png)
